@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style_TM.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+</head>
+<body>
+  <div class="top">
+    <button class="navbar" id="navbarButton"><span class="material-symbols-outlined">menu</span></button>
+    <div class="dropdown-buttons" id="dropdownButtons">
+      <button id="createBtn">Create</button>
+      <button class="sort" id="sort-by">Sort by:</button>
+      <div class="dropdown-buttons-2" id="dropdownButtons-2">
+        <button>Due date</button>
+        <button>Important</button>
+      </div>
+      <button id="theme-toggle">Change Theme</button> <!-- Added theme -->
+    </div>
+    <h1 class="heading"><a href="index_TM.html">Task Manager</a></h1>
+  </div>
+
+  <!-- Display the "No task created" message -->
+  <div id="noTaskMessage" class="no-task-message">
+    No task created
+  </div>
+
+  <div id="taskList" class="task-list">
+    <!-- Tasks will be listed here -->
+  </div>
+
+  <!-- Create Task Popup (Initially hidden) -->
+  <div id="createTaskPopup" class="create-task-popup">
+    <div class="popup-content">
+      <h2>Create Task</h2>
+      <label for="taskName">Task Name</label>
+      <input type="text" id="taskName" required />
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option value="Study">Study</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+      </select>
+
+      <label for="dueDate">Due Date</label>
+      <input type="date" id="dueDate" required />
+
+      <label for="description">Description</label>
+      <textarea id="description"></textarea>
+
+      <div class="popup-actions">
+        <button id="saveTask">Save</button>
+        <button id="cancelCreateTask">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script_TM.js"></script>
+</body>
+</html>
